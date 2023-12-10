@@ -1,6 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import ROUTES from 'contants/routes';
+import Home from '@screens/Home';
+
 const Stack = createStackNavigator();
 
 const MainNavigator = () => {
@@ -8,12 +11,10 @@ const MainNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        presentation: 'modal',
-        gestureEnabled: true,
       }}
-      initialRouteName="Login"
+      initialRouteName={ROUTES.HOME}
     >
-      {/* <Stack.Screen name="Login" component={Login} /> */}
+      <Stack.Screen name={ROUTES.HOME} component={Home} />
     </Stack.Navigator>
   );
 };

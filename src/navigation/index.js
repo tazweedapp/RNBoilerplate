@@ -5,7 +5,7 @@ import AuthNavigator from './AuthNavigator';
 import MainNavigator from './MainNavigator';
 
 const Navigation = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   return (
     <NavigationContainer>
       {isAuthenticated ? <AuthNavigator /> : <MainNavigator />}

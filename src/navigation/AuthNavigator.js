@@ -2,6 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from '@screens/Login';
+import ROUTES from 'contants/routes';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,9 +14,9 @@ const AuthNavigator = () => {
         presentation: 'modal',
         gestureEnabled: true,
       }}
-      initialRouteName="Login"
+      initialRouteName={ROUTES.LOGIN}
     >
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name={ROUTES.LOGIN} component={Login} />
     </Stack.Navigator>
   );
 };
