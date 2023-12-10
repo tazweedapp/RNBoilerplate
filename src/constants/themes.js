@@ -8,6 +8,9 @@ const LighTheme = {
     text: Colors.BLACK,
     border: Colors.GREY,
     card: Colors.BLACK,
+    buttonText: Colors.WHITE,
+    inputText: Colors.GREY,
+    error: Colors.RED,
   },
 };
 
@@ -19,6 +22,9 @@ const DarkTheme = {
     text: Colors.WHITE,
     border: Colors.WHITE,
     card: Colors.WHITE,
+    buttonText: Colors.WHITE,
+    inputText: Colors.GREY,
+    error: Colors.RED,
   },
 };
 

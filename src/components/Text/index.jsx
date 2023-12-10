@@ -14,8 +14,6 @@ const Text = ({
 }) => {
   const { colors } = useTheme();
 
-  console.log('COLOR:: ', color || colors.text);
-
   return (
     <RNText
       style={[

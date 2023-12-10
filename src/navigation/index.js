@@ -5,15 +5,18 @@ import AuthNavigator from './AuthNavigator';
 import MainNavigator from './MainNavigator';
 import { THEMES } from 'constants/themes';
 import { useTheme } from 'utils/ThemeProvider';
+import { useSelector } from 'react-redux';
+import { selectAuthToken } from '@redux/slices/authSlice';
 
 const Navigation = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = !!useSelector(selectAuthToken);
+  console.log('isAuthenticated:: ', isAuthenticated);
 
   const theme = useTheme();
 
   return (
     <NavigationContainer theme={THEMES[theme]}>
-      {isAuthenticated ? <AuthNavigator /> : <MainNavigator />}
+      {isAuthenticated ? <MainNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };

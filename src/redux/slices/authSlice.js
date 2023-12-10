@@ -4,11 +4,13 @@ import axios from 'axios';
 const API_BASE_URL = 'https://dummyjson.com/auth';
 
 export const login = createAsyncThunk('auth/login', async (credentials) => {
+  console.log('CREDENTIAL:: ', credentials);
   const response = await axios.post(`${API_BASE_URL}/login`, credentials, {
     headers: {
       'Content-Type': 'application/json',
     },
   });
+  console.log('RESPONSE:: ', response.data);
   return response.data;
 });
 
@@ -23,13 +25,16 @@ export const signup = createAsyncThunk('auth/signup', async (userData) => {
   return response.data;
 });
 
+const INITIAL_STATE = { user: null, token: null, theme: 'light' };
+
 const authSlice = createSlice({
   name: 'auth',
-  initialState: { user: null, token: null, theme: 'light' },
+  initialState: INITIAL_STATE,
   reducers: {
     setTheme: (state, { payload }) => {
       state.theme = payload;
     },
+    resetAuth: () => INITIAL_STATE,
   },
   extraReducers: (builder) => {
     builder
@@ -46,6 +51,7 @@ const authSlice = createSlice({
 });
 
 export const selectTheme = (state) => state.auth.theme;
+export const selectAuthToken = (state) => state.auth.token;
 
 export default authSlice.reducer;
-export const { setTheme } = authSlice.actions;
+export const { setTheme, resetAuth } = authSlice.actions;

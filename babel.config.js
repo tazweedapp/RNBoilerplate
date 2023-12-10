@@ -11,6 +11,7 @@ module.exports = {
           '@redux': './src/redux',
           '@constants': './src/constants',
           '@components': './src/components',
+          '@locales': './src/locales',
         },
       },
     ],
