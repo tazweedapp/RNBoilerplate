@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import config from 'react-native-config';
+
+import Text, { TEXT_ENUMS } from '@components/Text';
 
 const Home = () => {
   const isFrom = config.APP_CONFIG ?? '';
@@ -10,7 +12,9 @@ const Home = () => {
     <SafeAreaView style={styles.screenContainer}>
       <View style={styles.container}>
         <View style={styles.greetingContainer}>
-          <Text style={[styles.greetingText, styles.font]}>Hi Sathish K,</Text>
+          <Text type={TEXT_ENUMS.H2} style={[styles.greetingText, styles.font]}>
+            Hello,
+          </Text>
           <Text style={[styles.greetingText, styles.font]}>
             {`I am from ${isFrom}`}
           </Text>

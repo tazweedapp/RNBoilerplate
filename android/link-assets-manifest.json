@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/FrutigerLTArabic-55Roman.ttf",
+      "sha1": "da381046121ff263640a6bc9864f48b8be56d8e1"
+    },
+    {
+      "path": "src/assets/fonts/FrutigerLTArabic-65Bold.ttf",
+      "sha1": "6f91414e61e44140d326929854255d8e480d343d"
+    },
+    {
+      "path": "src/assets/fonts/FrutigerLTArabic-75Black.ttf",
+      "sha1": "e292efabf900b5daedbb1fdfd03dd4dbc76f92b6"
+    },
+    {
+      "path": "src/assets/fonts/circular-bold.ttf",
+      "sha1": "641ef6c2226ffe4a5fb8c38d45e43addb9a024c3"
+    },
+    {
+      "path": "src/assets/fonts/circular-book.ttf",
+      "sha1": "c333737f7a2ae7cd8da0569f1c9b80c8201c6da6"
+    },
+    {
+      "path": "src/assets/fonts/circular-medium.ttf",
+      "sha1": "cb0f52c1dc721debe3c68717e7fd06e64b3dd4e6"
+    }
+  ]
+}

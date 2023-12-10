@@ -5,7 +5,9 @@
     "paths": {
       "@screens/*": ["screens/*"],
       "@navigation/*": ["navigation/*"],
-      "@redux/*": ["redux/*"]
+      "@redux/*": ["redux/*"],
+      "@constants/*": ["constants/*"],
+      "@components/*": ["components/*"]
     }
   },
   "exclude": ["node_modules"]
