@@ -4,15 +4,21 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import config from 'react-native-config';
 
 import Text, { TEXT_ENUMS } from '@components/Text';
+import ThemeSwitch from '@components/ThemeSwitch';
+import { useTheme } from '@react-navigation/native';
 
 const Home = () => {
   const isFrom = config.APP_CONFIG ?? '';
+  const { colors } = useTheme();
 
   return (
     <SafeAreaView style={styles.screenContainer}>
       <View style={styles.container}>
-        <View style={styles.greetingContainer}>
-          <Text type={TEXT_ENUMS.H2} style={[styles.greetingText, styles.font]}>
+        <ThemeSwitch />
+        <View
+          style={[styles.greetingContainer, { borderColor: colors.border }]}
+        >
+          <Text type={TEXT_ENUMS.H2} style={styles.greetingText}>
             Hello,
           </Text>
           <Text style={[styles.greetingText, styles.font]}>
@@ -28,18 +34,13 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: { alignItems: 'center', flex: 1, justifyContent: 'center' },
-  font: {
-    fontWeight: '700',
-  },
   greetingContainer: {
     alignItems: 'center',
-    borderColor: 'red',
     borderRadius: 10,
     borderWidth: 1,
     padding: 10,
   },
   greetingText: {
-    color: 'red',
     marginTop: 5,
   },
   screenContainer: {

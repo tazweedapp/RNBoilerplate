@@ -4,6 +4,7 @@ module.exports = {
     '@react-native-community',
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   plugins: ['react', 'react-native', 'import'],
   rules: {

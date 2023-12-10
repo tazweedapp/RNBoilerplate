@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RNBoilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNBoilerplateTests.m */; };
+		0142662E452645BFAB56C14B /* circular-book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452FBB10D1E549F982F1111D /* circular-book.ttf */; };
 		05F5E5D7924EA2096C949CA7 /* libPods-RNBoilerplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D155952BF2CC75756E259549 /* libPods-RNBoilerplate.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F9864B5E47440D9B5E3F361E /* libPods-RNBoilerplate-RNBoilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2C078BC46DD391EF812 /* libPods-RNBoilerplate-RNBoilerplateTests.a */; };
-		E1477EE8A01F4FC7944FF039 /* FrutigerLTArabic-55Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */; };
 		570443021AF04BCAA63436C4 /* FrutigerLTArabic-65Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E35434F2F87342DCB56DF266 /* FrutigerLTArabic-65Bold.ttf */; };
-		9FD6F49DF8374558A043E23D /* FrutigerLTArabic-75Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */; };
 		5910152DA43B4AAEA5AA5C53 /* circular-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA50F7E02B394CD586885525 /* circular-bold.ttf */; };
-		0142662E452645BFAB56C14B /* circular-book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452FBB10D1E549F982F1111D /* circular-book.ttf */; };
 		62B8AFACFF3E48C091673BC4 /* circular-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67B10D54AF8F411E90ACD89B /* circular-medium.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9FD6F49DF8374558A043E23D /* FrutigerLTArabic-75Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */; };
+		E1477EE8A01F4FC7944FF039 /* FrutigerLTArabic-55Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */; };
+		F9864B5E47440D9B5E3F361E /* libPods-RNBoilerplate-RNBoilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2C078BC46DD391EF812 /* libPods-RNBoilerplate-RNBoilerplateTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,19 +43,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNBoilerplate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNBoilerplate/main.m; sourceTree = "<group>"; };
 		26E79E7655D90D49BFC730C2 /* Pods-RNBoilerplate-RNBoilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerplate-RNBoilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-RNBoilerplate-RNBoilerplateTests/Pods-RNBoilerplate-RNBoilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		452FBB10D1E549F982F1111D /* circular-book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "circular-book.ttf"; path = "../src/assets/fonts/circular-book.ttf"; sourceTree = "<group>"; };
+		67B10D54AF8F411E90ACD89B /* circular-medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "circular-medium.ttf"; path = "../src/assets/fonts/circular-medium.ttf"; sourceTree = "<group>"; };
 		74A3E7F697058078D86E3629 /* Pods-RNBoilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerplate.debug.xcconfig"; path = "Target Support Files/Pods-RNBoilerplate/Pods-RNBoilerplate.debug.xcconfig"; sourceTree = "<group>"; };
 		7615F2C078BC46DD391EF812 /* libPods-RNBoilerplate-RNBoilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBoilerplate-RNBoilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNBoilerplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FrutigerLTArabic-55Roman.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-55Roman.ttf"; sourceTree = "<group>"; };
+		A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FrutigerLTArabic-75Black.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-75Black.ttf"; sourceTree = "<group>"; };
 		BA16FFB0F638302D133616F1 /* Pods-RNBoilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerplate.release.xcconfig"; path = "Target Support Files/Pods-RNBoilerplate/Pods-RNBoilerplate.release.xcconfig"; sourceTree = "<group>"; };
+		BA50F7E02B394CD586885525 /* circular-bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "circular-bold.ttf"; path = "../src/assets/fonts/circular-bold.ttf"; sourceTree = "<group>"; };
 		D0EBDA7364C40BE5E7A21429 /* Pods-RNBoilerplate-RNBoilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerplate-RNBoilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-RNBoilerplate-RNBoilerplateTests/Pods-RNBoilerplate-RNBoilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D155952BF2CC75756E259549 /* libPods-RNBoilerplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBoilerplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E35434F2F87342DCB56DF266 /* FrutigerLTArabic-65Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FrutigerLTArabic-65Bold.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-65Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */ = {isa = PBXFileReference; name = "FrutigerLTArabic-55Roman.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-55Roman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E35434F2F87342DCB56DF266 /* FrutigerLTArabic-65Bold.ttf */ = {isa = PBXFileReference; name = "FrutigerLTArabic-65Bold.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-65Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */ = {isa = PBXFileReference; name = "FrutigerLTArabic-75Black.ttf"; path = "../src/assets/fonts/FrutigerLTArabic-75Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BA50F7E02B394CD586885525 /* circular-bold.ttf */ = {isa = PBXFileReference; name = "circular-bold.ttf"; path = "../src/assets/fonts/circular-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		452FBB10D1E549F982F1111D /* circular-book.ttf */ = {isa = PBXFileReference; name = "circular-book.ttf"; path = "../src/assets/fonts/circular-book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		67B10D54AF8F411E90ACD89B /* circular-medium.ttf */ = {isa = PBXFileReference; name = "circular-medium.ttf"; path = "../src/assets/fonts/circular-medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		580A8E367FD7435B9E75CACB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */,
+				E35434F2F87342DCB56DF266 /* FrutigerLTArabic-65Bold.ttf */,
+				A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */,
+				BA50F7E02B394CD586885525 /* circular-bold.ttf */,
+				452FBB10D1E549F982F1111D /* circular-book.ttf */,
+				67B10D54AF8F411E90ACD89B /* circular-medium.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,20 +174,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		580A8E367FD7435B9E75CACB /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				9998C822077F4814BF5964EE /* FrutigerLTArabic-55Roman.ttf */,
-				E35434F2F87342DCB56DF266 /* FrutigerLTArabic-65Bold.ttf */,
-				A4D924BA6EF449EFA31C9669 /* FrutigerLTArabic-75Black.ttf */,
-				BA50F7E02B394CD586885525 /* circular-bold.ttf */,
-				452FBB10D1E549F982F1111D /* circular-book.ttf */,
-				67B10D54AF8F411E90ACD89B /* circular-medium.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

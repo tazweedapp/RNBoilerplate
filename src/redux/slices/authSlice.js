@@ -25,8 +25,12 @@ export const signup = createAsyncThunk('auth/signup', async (userData) => {
 
 const authSlice = createSlice({
   name: 'auth',
-  initialState: { user: null, token: null },
-  reducers: {},
+  initialState: { user: null, token: null, theme: 'light' },
+  reducers: {
+    setTheme: (state, { payload }) => {
+      state.theme = payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(login.fulfilled, (state, { payload }) => {
@@ -41,4 +45,7 @@ const authSlice = createSlice({
   },
 });
 
+export const selectTheme = (state) => state.auth.theme;
+
 export default authSlice.reducer;
+export const { setTheme } = authSlice.actions;
