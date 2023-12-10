@@ -8,6 +8,18 @@ import Button from '@components/Button';
 import { useDispatch } from 'react-redux';
 import { login } from '@redux/slices/authSlice';
 import PasswordInput from '@components/PasswordInput';
+import { Formik } from 'formik';
+import * as yup from 'yup';
+
+const loginScheme = () => {
+  return yup.object().shape({
+    email: yup.string().email('invalid_email').required('email required'),
+    password: yup
+      .string()
+      .min(8, 'password too short')
+      .required('Password required'),
+  });
+};
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -20,9 +32,32 @@ const Login = () => {
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
         <Text>Login</Text>
-        <InputText placeholder="Email" />
-        <PasswordInput placeholder="Password" />
-        <Button text="Login" onPress={handleLogin} />
+        <Formik
+          initialValues={{
+            email: '',
+            password: '',
+          }}
+          validationSchema={loginScheme}
+          onSubmit={handleLogin}
+          validateOnMount
+          validateOnChange
+        >
+          {({ handleSubmit, setFieldValue, values, errors }) => (
+            <View style={styles.form}>
+              <InputText
+                placeholder="Email"
+                value={values.email}
+                onChangeText={(value) => setFieldValue('email', value)}
+              />
+              <PasswordInput
+                placeholder="Password"
+                value={values.password}
+                setValue={(value) => setFieldValue('password', value)}
+              />
+              <Button text="Login" onPress={handleSubmit} />
+            </View>
+          )}
+        </Formik>
       </View>
     </SafeAreaView>
   );
@@ -37,6 +72,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: scale(20),
     gap: verticalScale(20),
+  },
+  form: {
+    gap: verticalScale(20),
+    width: '100%',
   },
   wrapper: {
     flex: 1,
