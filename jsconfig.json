@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@screens/*": ["screens/*"],
+      "@navigation/*": ["navigation/*"],
+      "@redux/*": ["redux/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
