@@ -48,13 +48,19 @@ const Login = () => {
                 placeholder="Email"
                 value={values.email}
                 onChangeText={(value) => setFieldValue('email', value)}
+                errorMessage={errors.email}
               />
               <PasswordInput
                 placeholder="Password"
                 value={values.password}
                 setValue={(value) => setFieldValue('password', value)}
+                errorMessage={errors.password}
               />
-              <Button text="Login" onPress={handleSubmit} />
+              <Button
+                text="Login"
+                onPress={handleSubmit}
+                disabled={!!Object.keys(errors).length}
+              />
             </View>
           )}
         </Formik>

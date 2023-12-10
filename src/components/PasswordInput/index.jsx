@@ -53,7 +53,7 @@ const PasswordInput = ({
             value={value}
             textAlign={isRTL ? 'right' : 'left'}
             placeholder={t('password')}
-            borderColor={colors.border}
+            borderColor={errorMessage ? colors.error : colors.border}
             style={[styles.textStyle, { backgroundColor: colors.background }]}
           />
           <TouchableOpacity
