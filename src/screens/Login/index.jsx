@@ -12,6 +12,8 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import { useToast } from '../../hooks/useToast';
 import ErrorBoundary from 'react-native-error-boundary';
+import LanguageToggler from '@components/LanguageToggler';
+import { useTranslation } from 'react-i18next';
 
 const loginScheme = () => {
   return yup.object().shape({
@@ -24,6 +26,7 @@ const loginScheme = () => {
 };
 
 const Login = () => {
+  const { t } = useTranslation();
   const showToast = useToast();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
@@ -46,7 +49,8 @@ const Login = () => {
     <ErrorBoundary>
       <SafeAreaView style={styles.wrapper}>
         <View style={styles.container}>
-          <Text>Login</Text>
+          <LanguageToggler />
+          <Text>{t('screens.login.title')}</Text>
           <Formik
             initialValues={{
               email: '',
@@ -60,19 +64,19 @@ const Login = () => {
             {({ handleSubmit, setFieldValue, values, errors }) => (
               <View style={styles.form}>
                 <InputText
-                  placeholder="Email"
+                  placeholder={t('screens.login.email')}
                   value={values.email}
                   onChangeText={(value) => setFieldValue('email', value)}
                   errorMessage={errors.email}
                 />
                 <PasswordInput
-                  placeholder="Password"
+                  placeholder={t('screens.login.password')}
                   value={values.password}
                   setValue={(value) => setFieldValue('password', value)}
                   errorMessage={errors.password}
                 />
                 <Button
-                  text="Login"
+                  text={t('screens.login.title')}
                   loading={loading}
                   onPress={handleSubmit}
                   disabled={!!Object.keys(errors).length}

@@ -1,3 +1,10 @@
 {
-  "language": "English"
+  "language": "English",
+  "screens": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password"
+    }
+  }
 }
