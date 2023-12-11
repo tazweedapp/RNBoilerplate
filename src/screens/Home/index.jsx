@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import config from 'react-native-config';
 
@@ -10,14 +10,20 @@ import Button from '@components/Button';
 import { useDispatch } from 'react-redux';
 import { resetAuth } from '@redux/slices/authSlice';
 import { verticalScale } from 'react-native-size-matters';
+import HomeModal from './HomeModal';
 
 const Home = () => {
   const dispatch = useDispatch();
+  const modalRef = useRef(null);
   const isFrom = config.APP_CONFIG || '';
   const { colors } = useTheme();
 
   const handleLogout = () => {
     dispatch(resetAuth());
+  };
+
+  const handleModalOpen = () => {
+    modalRef.current.present();
   };
 
   return (
@@ -34,8 +40,10 @@ const Home = () => {
             {`I am from ${isFrom}`}
           </Text>
         </View>
+        <Button text="Open Modal" onPress={handleModalOpen} />
         <Button text="Logout" onPress={handleLogout} />
       </View>
+      <HomeModal ref={modalRef} />
     </SafeAreaView>
   );
 };

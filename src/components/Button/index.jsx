@@ -35,7 +35,7 @@ const Button = ({
         <ActivityIndicator
           hidesWhenStopped={true}
           animating={loading}
-          color={colors.text}
+          color={colors.buttonText}
           style={styles.loader}
         />
       )}

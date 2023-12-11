@@ -10,7 +10,6 @@ import { selectAuthToken } from '@redux/slices/authSlice';
 
 const Navigation = () => {
   const isAuthenticated = !!useSelector(selectAuthToken);
-  console.log('isAuthenticated:: ', isAuthenticated);
 
   const theme = useTheme();
 

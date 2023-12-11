@@ -12,8 +12,11 @@ module.exports = {
           '@constants': './src/constants',
           '@components': './src/components',
           '@locales': './src/locales',
+          '@hooks': './src/hooks',
+          '@utils': './src/utils',
         },
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 };

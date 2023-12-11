@@ -8,7 +8,9 @@
       "@redux/*": ["redux/*"],
       "@constants/*": ["constants/*"],
       "@components/*": ["components/*"],
-      "@locales/*": ["locales/*"]
+      "@locales/*": ["locales/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "exclude": ["node_modules"]

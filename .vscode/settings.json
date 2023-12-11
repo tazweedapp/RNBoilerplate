@@ -1,4 +1,10 @@
 {
+  "explorer.confirmDelete": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "i18n-ally.localesPaths": [
     "src/locales",
     "ios/Pods/Flipper-Boost-iOSX/boost/locale",

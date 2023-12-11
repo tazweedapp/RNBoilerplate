@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
     <View style={styles.wrapper}>
       <Text style={{ color: colors.primary }}>{theme.dark ? '🌛' : '🌞'}</Text>
       <Switch
-        trackColor={{ false: colors.card, true: colors.card }}
+        trackColor={{ false: colors.card, true: colors.border }}
         thumbColor={colors.primary}
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}

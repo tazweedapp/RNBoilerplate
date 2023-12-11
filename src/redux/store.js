@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import authSlice from '@redux/slices/authSlice';
+import { productsAPI } from '@redux/queries/productsAPI';
 
 const authPersistConfig = {
   key: 'root',
@@ -12,6 +13,7 @@ const authPersistConfig = {
 
 const combinedReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authSlice),
+  [productsAPI.reducerPath]: productsAPI.reducer,
 });
 
 const logger = createLogger({
@@ -26,7 +28,7 @@ const store = configureStore({
     })
       .concat(logger)
       // ADD RTK MIDDLEWARE HERE
-      .concat([]),
+      .concat([productsAPI.middleware]),
 });
 
 const persistor = persistStore(store);

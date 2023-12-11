@@ -20,6 +20,7 @@ module.exports = {
     'react-native/no-inline-styles': 1,
     'react-native/no-color-literals': 1,
     'react-native/no-raw-text': 1,
+    'no-undef': 'error',
     'react-native/sort-styles': [
       1,
       'asc',

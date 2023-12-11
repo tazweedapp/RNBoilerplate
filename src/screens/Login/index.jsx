@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Text from '@components/Text';
 import InputText from '@components/InputText';
@@ -10,6 +10,8 @@ import { login } from '@redux/slices/authSlice';
 import PasswordInput from '@components/PasswordInput';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import { useToast } from '../../hooks/useToast';
+import ErrorBoundary from 'react-native-error-boundary';
 
 const loginScheme = () => {
   return yup.object().shape({
@@ -22,50 +24,65 @@ const loginScheme = () => {
 };
 
 const Login = () => {
+  const showToast = useToast();
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = () => {
-    dispatch(login({ username: 'kminchelle', password: '0lelplR' }));
+  const handleLogin = async (values) => {
+    try {
+      setLoading(true);
+      await dispatch(
+        login({ username: 'kminchelle', password: '0lelplR' })
+      ).unwrap();
+      showToast('success', 'Login successful');
+    } catch (err) {
+      showToast('error', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <SafeAreaView style={styles.wrapper}>
-      <View style={styles.container}>
-        <Text>Login</Text>
-        <Formik
-          initialValues={{
-            email: '',
-            password: '',
-          }}
-          validationSchema={loginScheme}
-          onSubmit={handleLogin}
-          validateOnMount
-          validateOnChange
-        >
-          {({ handleSubmit, setFieldValue, values, errors }) => (
-            <View style={styles.form}>
-              <InputText
-                placeholder="Email"
-                value={values.email}
-                onChangeText={(value) => setFieldValue('email', value)}
-                errorMessage={errors.email}
-              />
-              <PasswordInput
-                placeholder="Password"
-                value={values.password}
-                setValue={(value) => setFieldValue('password', value)}
-                errorMessage={errors.password}
-              />
-              <Button
-                text="Login"
-                onPress={handleSubmit}
-                disabled={!!Object.keys(errors).length}
-              />
-            </View>
-          )}
-        </Formik>
-      </View>
-    </SafeAreaView>
+    <ErrorBoundary>
+      <SafeAreaView style={styles.wrapper}>
+        <View style={styles.container}>
+          <Text>Login</Text>
+          <Formik
+            initialValues={{
+              email: '',
+              password: '',
+            }}
+            validationSchema={loginScheme}
+            onSubmit={handleLogin}
+            validateOnMount
+            validateOnChange
+          >
+            {({ handleSubmit, setFieldValue, values, errors }) => (
+              <View style={styles.form}>
+                <InputText
+                  placeholder="Email"
+                  value={values.email}
+                  onChangeText={(value) => setFieldValue('email', value)}
+                  errorMessage={errors.email}
+                />
+                <PasswordInput
+                  placeholder="Password"
+                  value={values.password}
+                  setValue={(value) => setFieldValue('password', value)}
+                  errorMessage={errors.password}
+                />
+                <Button
+                  text="Login"
+                  loading={loading}
+                  onPress={handleSubmit}
+                  disabled={!!Object.keys(errors).length}
+                />
+              </View>
+            )}
+          </Formik>
+        </View>
+      </SafeAreaView>
+    </ErrorBoundary>
   );
 };
 

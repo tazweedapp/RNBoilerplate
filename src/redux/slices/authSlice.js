@@ -1,26 +1,27 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosInstance from '@utils/axiosInstance';
 
-const API_BASE_URL = 'https://dummyjson.com/auth';
-
-export const login = createAsyncThunk('auth/login', async (credentials) => {
-  console.log('CREDENTIAL:: ', credentials);
-  const response = await axios.post(`${API_BASE_URL}/login`, credentials, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  console.log('RESPONSE:: ', response.data);
-  return response.data;
-});
+export const login = createAsyncThunk(
+  'auth/login',
+  async (credentials, { rejectWithValue }) => {
+    try {
+      const response = await axiosInstance.post(`auth/login`, credentials, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(err?.message);
+    }
+  }
+);
 
 export const signup = createAsyncThunk('auth/signup', async (userData) => {
-  const response = await fetch(`${API_BASE_URL}/signup`, {
-    method: 'POST',
+  const response = await axiosInstance.post(`auth/signup`, credentials, {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(userData),
   });
   return response.data;
 });
