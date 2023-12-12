@@ -1,7 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import React, { useRef } from 'react';
 import PhoneInput from 'react-native-phone-number-input';
-import { useTranslation } from 'react-i18next';
 
 import Text, { TEXT_ENUMS } from '@components/Text';
 import Label from '../Label';
@@ -22,7 +21,6 @@ const PhoneNumberInput = ({
   autoFocus = false,
 }) => {
   const { colors } = useTheme();
-  const { t } = useTranslation();
   const phoneInput = useRef(null);
   const handleChange = (text) => {
     const isValid = phoneInput.current.isValidNumber(text);
@@ -78,7 +76,7 @@ const PhoneNumberInput = ({
             type={TEXT_ENUMS.P2}
             style={styles.errorText}
           >
-            {errorMessage || t('phoneNumber_invalid')}
+            {errorMessage || 'phoneNumber invalid'}
           </Text>
         ))}
     </View>
