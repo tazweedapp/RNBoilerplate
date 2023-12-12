@@ -14,6 +14,7 @@ import { useToast } from '../../hooks/useToast';
 import ErrorBoundary from 'react-native-error-boundary';
 import LanguageToggler from '@components/LanguageToggler';
 import { useTranslation } from 'react-i18next';
+import PhoneNumberInput from '@components/PhoneNumberInput';
 
 const loginScheme = () => {
   return yup.object().shape({
@@ -75,6 +76,7 @@ const Login = () => {
                   setValue={(value) => setFieldValue('password', value)}
                   errorMessage={errors.password}
                 />
+                <PhoneNumberInput />
                 <Button
                   text={t('screens.login.title')}
                   loading={loading}
